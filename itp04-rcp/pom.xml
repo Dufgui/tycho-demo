@@ -65,6 +65,7 @@ Contributors:
 							<arch>x86_64</arch>
 						</environment>
 					</environments>
+					<executionEnvironment>JavaSE-1.8</executionEnvironment>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -91,6 +92,14 @@ Contributors:
 						</jdk>
 					</toolchains>
 				</configuration> 
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<requireJREPackageImports>true</requireJREPackageImports>
+				</configuration>
 			</plugin>
 			
 		</plugins>
