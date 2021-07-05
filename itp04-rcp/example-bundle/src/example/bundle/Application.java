@@ -18,6 +18,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
 
+import javax.xml.bind.annotation.XmlEnum;
+
 /**
  * This class controls all aspects of the application's execution
  */
@@ -30,6 +32,7 @@ public class Application implements IApplication {
      */
     public Object start(IApplicationContext context) throws Exception {
         Display display = PlatformUI.createDisplay();
+        XmlEnum xmlEnum = null;
         try {
             int returnCode = PlatformUI.createAndRunWorkbench(display, new ApplicationWorkbenchAdvisor());
             if (returnCode == PlatformUI.RETURN_RESTART)

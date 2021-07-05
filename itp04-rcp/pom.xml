@@ -73,6 +73,26 @@ Contributors:
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>toolchain</goal> 
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<toolchains>
+						<jdk>
+							<version>1.8</version> 
+						</jdk>
+					</toolchains>
+				</configuration> 
+			</plugin>
+			
 		</plugins>
 	</build>
 </project>
